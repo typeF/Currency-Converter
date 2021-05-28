@@ -32,9 +32,10 @@ func main() {
 
 	fmt.Printf("Selected base currency: %v\n\n", currencyLabel)
 	fmt.Println("Select your currency to convert to:")
-	for i := 0; i < len(converters); i++ {
+	// for i := 0; i < len(converters); i++ {
+	for i, v := range converters {
 		if i != (baseCurrency - 1) {
-			fmt.Printf("[%v] %v\n", i+1, converters[i].GetLabel())
+			fmt.Printf("[%v] %v\n", i+1, v.GetLabel())
 		}
 	}
 
